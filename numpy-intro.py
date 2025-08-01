@@ -20,3 +20,17 @@ print(c.sum(axis=1))
 
 f = np.array([[2, 4, 8], [5, 7, 1], [1, 2, 3]])
 print(f[:2, :2])
+for row in f:
+    print(row)
+for cell in f.flat:
+    print(cell)
+print(np.vstack((c.reshape(2, 3),f)))
+# print(np.hstack((c, f.reshape(5, 2))))
+print(np.hsplit(np.arange(30).reshape(3, 10), 5)) # spliting horizontally into 5 different sizes arrays
+
+h = np.arange(15).reshape(3, 5)
+g = h>7
+print(h)
+print(g)
+h[g] = 0
+print(h)
